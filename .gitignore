@@ -1,0 +1,42 @@
+# Fichiers de build et caches Flutter/Dart
+.dart_tool/
+.flutter-plugins
+.flutter-plugins-dependencies
+.packages
+build/
+.pub-cache/
+.pub/
+pubspec.lock
+
+# IDE
+.idea/
+.vscode/
+*.iml
+*.ipr
+*.iws
+
+# Fichiers générés par les plateformes (regénérables via `flutter create .`)
+android/.gradle/
+android/app/debug/
+android/app/profile/
+android/app/release/
+android/local.properties
+android/key.properties
+ios/Flutter/Flutter.framework
+ios/Flutter/Flutter.podspec
+ios/Pods/
+ios/.symlinks/
+ios/Podfile.lock
+**/GeneratedPluginRegistrant.*
+
+# Secrets / clés de signature
+*.keystore
+*.jks
+*.p12
+*.pem
+.env
+.env.*
+
+# Divers
+.DS_Store
+*.log
