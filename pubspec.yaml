@@ -1,0 +1,35 @@
+name: orleans_connect
+description: "Orléans Connect — la plateforme communautaire locale des Orléanais."
+publish_to: "none"
+
+# Version affichée dans les stores : <version>+<build number>
+version: 0.1.0+1
+
+environment:
+  sdk: ">=3.6.0 <4.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  # Icônes iOS
+  cupertino_icons: ^1.0.8
+  # Navigation déclarative (compatible mobile + web, gère les URLs)
+  go_router: ^14.2.0
+  # Gestion d'état simple et éprouvée
+  provider: ^6.1.2
+  # Formatage des dates/heures en français
+  intl: ^0.19.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^4.0.0
+
+flutter:
+  uses-material-design: true
+
+  # Décommenter une fois les visuels ajoutés dans assets/
+  # assets:
+  #   - assets/images/
+  #   - assets/data/
