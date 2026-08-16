@@ -15,9 +15,11 @@ class MobilityRepository {
     if (destinationQuery != null && destinationQuery.trim().isNotEmpty) {
       final q = destinationQuery.toLowerCase().trim();
       items = items
-          .where((r) =>
-              r.destination.toLowerCase().contains(q) ||
-              r.origin.toLowerCase().contains(q))
+          .where(
+            (r) =>
+                r.destination.toLowerCase().contains(q) ||
+                r.origin.toLowerCase().contains(q),
+          )
           .toList();
     }
     return items;

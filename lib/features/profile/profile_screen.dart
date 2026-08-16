@@ -56,7 +56,7 @@ class ProfileScreen extends StatelessWidget {
             ],
           ),
           const Divider(height: 36),
-          _SectionLabel('Mon quartier'),
+          const _SectionLabel('Mon quartier'),
           const SizedBox(height: 8),
           Wrap(
             spacing: 8,
@@ -71,7 +71,7 @@ class ProfileScreen extends StatelessWidget {
             ],
           ),
           const SizedBox(height: 28),
-          _SectionLabel('Ce qui m\'intéresse'),
+          const _SectionLabel('Ce qui m\'intéresse'),
           const SizedBox(height: 8),
           Wrap(
             spacing: 8,
@@ -86,7 +86,7 @@ class ProfileScreen extends StatelessWidget {
             ],
           ),
           const SizedBox(height: 28),
-          _SectionLabel('Rubriques d\'actualité suivies'),
+          const _SectionLabel('Rubriques d\'actualité suivies'),
           const SizedBox(height: 8),
           Wrap(
             spacing: 8,

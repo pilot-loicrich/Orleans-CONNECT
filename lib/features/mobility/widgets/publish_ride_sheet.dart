@@ -102,9 +102,10 @@ class _PublishRideSheetState extends State<PublishRideSheet> {
                     label: 'Prix / place',
                     value: '${_price.toStringAsFixed(1)} €',
                     onMinus: _price > 0
-                        ? () => setState(() => _price = (_price - 0.5)
-                            .clamp(0, 20)
-                            .toDouble())
+                        ? () => setState(
+                            () => _price =
+                                (_price - 0.5).clamp(0, 20).toDouble(),
+                          )
                         : null,
                     onPlus: () => setState(
                       () => _price = (_price + 0.5).clamp(0, 20).toDouble(),

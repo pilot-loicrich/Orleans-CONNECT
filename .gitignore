@@ -15,6 +15,18 @@ pubspec.lock
 *.ipr
 *.iws
 
+# Dossiers de plateforme entiers (regénérables via `flutter create .`)
+/android/
+/ios/
+/web/
+/linux/
+/macos/
+/windows/
+
+# Captures d'écran de démo (générées localement)
+screenshot-*.png
+shot-*.png
+
 # Fichiers générés par les plateformes (regénérables via `flutter create .`)
 android/.gradle/
 android/app/debug/

@@ -17,11 +17,18 @@ class RecommendationsScreen extends StatelessWidget {
   const RecommendationsScreen({super.key});
 
   Future<List<Recommendation>> _load(BuildContext context) async {
+    // On lit toutes les dépendances AVANT le premier await : après un await,
+    // le BuildContext ne doit plus être utilisé (il pourrait ne plus être
+    // valide si le widget a été retiré de l'arbre entre-temps).
     final profile = context.read<ProfileController>().profile;
     final engine = context.read<RecommendationEngine>();
-    final businesses = await context.read<BusinessRepository>().fetchAll();
-    final news = await context.read<NewsRepository>().fetchNews();
-    final rides = await context.read<MobilityRepository>().fetchRides();
+    final businessRepo = context.read<BusinessRepository>();
+    final newsRepo = context.read<NewsRepository>();
+    final mobilityRepo = context.read<MobilityRepository>();
+
+    final businesses = await businessRepo.fetchAll();
+    final news = await newsRepo.fetchNews();
+    final rides = await mobilityRepo.fetchRides();
 
     return engine.recommend(
       profile: profile,
